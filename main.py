@@ -28,7 +28,7 @@ def flip_card():
     canvas.itemconfig(card_word,text=thechosen["English"],fill="white")
     canvas.itemconfig(card_background,image=b_image)
 ## ------------------------------- Time ---------------------------
-def fuck():
+def Save():
       liste1.remove(thechosen)
       new_file=pandas.DataFrame(liste1)
       new_file.to_csv("Words_game/tolearn.csv",index=False)
@@ -51,7 +51,7 @@ card_lan=canvas.create_text(400,200,text="Title",font=("arial",60,"italic"))
 card_word=canvas.create_text(400,263,text="Words",font=("arial",40,"italic"))
 canvas.grid(row=0,column=0,columnspan=2)
 b2_image=PhotoImage(file="Words_game/right.png")
-button1=Button(text="Yes",bg="green",image= b2_image,highlightthickness=0,command=fuck)
+button1=Button(text="Yes",bg="green",image= b2_image,highlightthickness=0,command=Save)
 button1.grid(row=1,column=0)
 
 b1_image=PhotoImage(file="Words_game/wrong.png")
